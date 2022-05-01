@@ -1,0 +1,46 @@
+﻿<Window x:Class="Visual_Calculator.MainWindow"
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:local="clr-namespace:Visual_Calculator"
+     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     mc:Ignorable="d"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+     Title="计算器" Height="650" Width="1080"
+      MaxHeight="650" MaxWidth="1080"
+      PreviewTextInput="Keyboard_in" KeyDown="KeyCalculating" ResizeMode="CanMinimize" Icon="/计算器.png">
+    <Grid>
+        <TextBox x:Name="TextData" Text="" InputMethod.IsInputMethodEnabled="False" TextWrapping="Wrap" TextAlignment="Right" Cursor="Arrow" FontSize="60" Height="83" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,10,0,0" Width="1009" IsReadOnly="True"/>
+        <Button Content="9" HorizontalAlignment="Left" Margin="370,175,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="Num9_Click"/>
+        <Button Content="8" HorizontalAlignment="Left" Margin="200,175,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="Num8_Click"/>
+        <Button Content="7" HorizontalAlignment="Left" Margin="30,175,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="Num7_Click" Cursor="Hand"/>
+        <Button Content="6" HorizontalAlignment="Left" Margin="370,289,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="Num6_Click"/>
+        <Button Content="5" HorizontalAlignment="Left" Margin="200,289,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="Num5_Click"/>
+        <Button Content="4" HorizontalAlignment="Left" Margin="30,289,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="Num4_Click"/>
+        <Button Content="3" HorizontalAlignment="Left" Margin="370,403,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="Num3_Click"/>
+        <Button Content="2" HorizontalAlignment="Left" Margin="200,403,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="Num2_Click"/>
+        <Button Content="1" HorizontalAlignment="Left" Margin="30,403,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="Num1_Click"/>
+        <Button Content="0" HorizontalAlignment="Left" Margin="200,517,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="Num0_Click" Cursor="Hand"/>
+        <Button Content="(" HorizontalAlignment="Left" Margin="30,517,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="LeftBrac_Click"/>
+        <Button Content=")" HorizontalAlignment="Left" Margin="370,517,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="RightBrac_Click"/>
+        <Button Content="+" HorizontalAlignment="Left" Margin="600,175,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="Plus_Click"/>
+        <Button Content="-" HorizontalAlignment="Left" Margin="600,289,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="Sub_Click"/>
+        <Button Content="×" HorizontalAlignment="Left" Margin="600,403,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="Multi_Click"/>
+        <Button Content="÷" HorizontalAlignment="Left" Margin="600,517,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="Divide_Click"/>
+        <Button Content="!" HorizontalAlignment="Left" Margin="770,403,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="No_Click"/>
+        <Button Content="||" HorizontalAlignment="Left" Margin="770,289,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="Or_Click"/>
+        <Button Content="&amp;&amp;" HorizontalAlignment="Left" Margin="770,175,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="And_Click"/>
+        <Button Content="=" HorizontalAlignment="Left" Margin="770,517,0,0" VerticalAlignment="Top" Height="74" Width="99" FontSize="30" Click="Equal_Click"/>
+        <Button Content="BP" HorizontalAlignment="Left" Margin="940,175,0,0" VerticalAlignment="Top" Height="188" Width="99" FontSize="30" Click="BP_Click"/>
+        <Button Content="CE" HorizontalAlignment="Left" Margin="940,403,0,0" VerticalAlignment="Top" Height="188" Width="99" FontSize="30" Click="CE_Click"/>
+        <Label HorizontalAlignment="Left" Margin="30,110,0,0" VerticalAlignment="Top" Height="49" Width="1009" x:Name="HistoryData" HorizontalContentAlignment="Right" FontSize="36" FontFamily="Microsoft YaHei"/>
+        <materialDesign:Snackbar  MessageQueue="{materialDesign:MessageQueue}" x:Name="InformationBar"/>
+    </Grid>
+</Window>
